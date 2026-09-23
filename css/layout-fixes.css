@@ -1,0 +1,43 @@
+@media (min-width: 821px) {
+  .start-screen {
+    padding: clamp(36px, 7vh, 72px) clamp(24px, 4vw, 60px);
+    gap: 4vw;
+  }
+
+  .hero-copy {
+    max-width: 600px;
+    min-width: 0;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(46px, 5vw, 72px);
+  }
+
+  .mission-card {
+    width: min(360px, 100%);
+    flex: 0 0 auto;
+  }
+}
+
+.game-legend {
+  width: min(1080px, 100%);
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 14px 18px 0;
+  color: #b9dce2;
+  font-size: 13px;
+}
+
+.game-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.game-legend .collect b { color: #76ffe5; }
+.game-legend .avoid b { color: #ffb2b2; }
+
+@media (max-width: 620px) {
+  .game-legend { flex-direction: column; gap: 6px; align-items: center; }
+}

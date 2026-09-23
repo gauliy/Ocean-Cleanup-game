@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ocean Cleanup: Protect the Blue</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout-fixes.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" id="home-link"><span>🌊</span> Ocean Cleanup</a>
+      <div class="top-actions"><span class="best">Best <strong id="best-score">0</strong></span><button id="sound-button" class="icon-button" aria-label="Toggle sound">🔊</button></div>
+    </header>
+
+    <section id="start-screen" class="screen start-screen active">
+      <div class="hero-copy">
+        <p class="eyebrow">PROTECT THE BLUE</p>
+        <h1>Clean the ocean.<br><span>Save marine life.</span></h1>
+        <p class="lead">Pilot the cleanup boat, collect drifting waste and avoid the animals that call the ocean home.</p>
+        <button id="start-button" class="primary-button">Start Game <span>→</span></button>
+        <div class="controls-card">
+          <div><kbd>WASD</kbd><kbd>↑ ↓ ← →</kbd><span>Move</span></div>
+          <div><kbd>P</kbd><span>Pause</span></div>
+        </div>
+      </div>
+      <aside class="mission-card">
+        <p class="mission-label">YOUR MISSION</p>
+        <div class="mission-stat"><strong>60</strong><span>seconds to clean</span></div>
+        <ul>
+          <li><span>🧴</span><div><b>Collect waste</b><small>Earn points and build a combo</small></div></li>
+          <li><span>🐢</span><div><b>Protect wildlife</b><small>Avoid animals and rocky reefs</small></div></li>
+          <li><span>⚡</span><div><b>Keep your streak</b><small>5 clean pickups earn +20</small></div></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="game-screen" class="screen game-screen">
+      <div class="hud">
+        <div><span>Score</span><strong id="score">0</strong></div>
+        <div><span>Time</span><strong><b id="time">60</b>s</strong></div>
+        <div><span>Lives</span><strong id="lives" class="lives">♥ ♥ ♥</strong></div>
+        <div><span>Combo</span><strong id="combo">×0</strong></div>
+        <button id="pause-button" class="pause-button">Ⅱ Pause</button>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="game-canvas" width="960" height="540" aria-label="Ocean Cleanup game area"></canvas>
+        <div id="toast" class="toast" aria-live="polite"></div>
+        <div id="pause-overlay" class="overlay-panel">
+          <div class="overlay-box"><p class="eyebrow">TAKE A BREATH</p><h2>Game Paused</h2><button id="resume-button" class="primary-button">Resume</button></div>
+        </div>
+      </div>
+      <div class="game-legend" aria-label="Game object guide">
+        <span class="collect">🧴 🛍️ 🥫 🕸️ <b>Collect waste</b></span>
+        <span class="avoid">🐢 🐟 🐬 🪨 <b>Avoid wildlife and rocks</b></span>
+      </div>
+    </section>
+
+    <section id="end-screen" class="screen end-screen">
+      <div class="result-panel">
+        <p class="eyebrow">MISSION COMPLETE</p>
+        <div class="result-icon">🏆</div>
+        <h2 id="rank-title">Ocean Helper</h2>
+        <p id="rank-message">Great work! You made the ocean cleaner.</p>
+        <div class="final-score"><span>Final score</span><strong id="final-score">0</strong><small id="new-best"></small></div>
+        <div class="results-grid">
+          <div><span>Waste collected</span><strong id="waste-count">0</strong></div>
+          <div><span>Animals protected</span><strong id="animal-count">0</strong></div>
+          <div><span>Best combo</span><strong id="best-combo">×0</strong></div>
+        </div>
+        <div class="eco-fact"><span>🌱 ECO FACT</span><p id="eco-fact"></p></div>
+        <div class="result-actions"><button id="again-button" class="primary-button">Play Again</button><button id="home-button" class="secondary-button">Back to Home</button></div>
+      </div>
+    </section>
+  </main>
+  <script src="js/game.js"></script>
+</body>
+</html>
